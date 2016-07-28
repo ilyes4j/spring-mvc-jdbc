@@ -6,7 +6,15 @@
  <packaging>war</packaging>
  <version>0.0.1-SNAPSHOT</version>
  <name>spring-mvc-jdbc Maven Webapp</name>
+
  <url>http://maven.apache.org</url>
+
+ <properties>
+
+  <!-- Using java 1.7 source level -->
+  <java.version>1.7</java.version>
+ </properties>
+
  <dependencies>
   <dependency>
    <groupId>junit</groupId>
@@ -15,7 +23,18 @@
    <scope>test</scope>
   </dependency>
  </dependencies>
+
  <build>
   <finalName>spring-mvc-jdbc</finalName>
+  <plugins>
+   <plugin>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.1</version>
+    <configuration>
+     <source>${java.version}</source>
+     <target>${java.version}</target>
+    </configuration>
+   </plugin>
+  </plugins>
  </build>
 </project>
