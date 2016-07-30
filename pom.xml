@@ -13,9 +13,22 @@
 
   <!-- Using java 1.7 source level -->
   <java.version>1.7</java.version>
+
+  <!-- Using servlet API 3.0.1 -->
+  <servlet.version>3.0.1</servlet.version>
+
  </properties>
 
  <dependencies>
+
+  <!-- Servlet API -->
+  <dependency>
+   <groupId>javax.servlet</groupId>
+   <artifactId>javax.servlet-api</artifactId>
+   <version>${servlet.version}</version>
+   <scope>provided</scope>
+  </dependency>
+
   <dependency>
    <groupId>junit</groupId>
    <artifactId>junit</artifactId>
